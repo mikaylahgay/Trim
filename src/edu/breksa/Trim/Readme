@@ -1,0 +1,8 @@
+Usage: java -jar Trim.jar [file1, folder1, file2, etc] [options]
+ --file-extensions (-fe) VAL : A comma-delimited list of file extensions (not
+                               case sensitive)
+ --recursion-level (-rl) N   : The number of directories Trim will go down
+                               recursively. 0 = no limit
+ --recursive (-r)            : If Trim should search recursively
+ --remove-empty-lines (-rel) : Remove empty lines
+ --trim-lines (-tl)          : Trim each line

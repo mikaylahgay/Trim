@@ -25,7 +25,7 @@ public class Main {
 
 
     public static void badBye() {
-        System.out.println("Usage: java -jar Trim.jar [file1, file2, etc] [options]");
+        System.out.println("Usage: java -jar Trim.jar [file1, folder1, file2, etc] [options]");
         cmdLineParser.printUsage(System.out);
         System.exit(0);
     }

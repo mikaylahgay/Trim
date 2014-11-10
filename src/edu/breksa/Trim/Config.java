@@ -13,7 +13,7 @@ public class Config {
     public int recursionlevel = 0;
     @Option(name = "--remove-empty-lines", aliases = "-rel", usage = "Remove empty lines")
     public Boolean rel = false;
-    @Option(name = "--trim-lines", aliases = "-tl", usage = "Trime each line")
+    @Option(name = "--trim-lines", aliases = "-tl", usage = "Trim each line")
     public Boolean tl = false;
     @Option(name = "--file-extensions", aliases = "-fe", usage = "A comma-delimited list of file extensions (not case sensitive)")
     public String extentionString = "";
