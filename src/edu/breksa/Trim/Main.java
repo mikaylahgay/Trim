@@ -61,7 +61,7 @@ public class Main {
             filterFile(file, 0);
         }
         if (files.isEmpty()) {
-            System.err.println("No valid files provided.");
+            System.err.println("No valid files provided/found.");
         }
         for (String string : files) {
             if (processFile(string)) {
@@ -136,15 +136,19 @@ public class Main {
 
     private static void filterFile(File file, int level) {
         if (file.isDirectory()) {
-            if (!Main.config.recursive || (level > Main.config.recursionlevel && Main.config.recursionlevel != 0)) {
+            if (!Main.config.recursive) {
                 return;
             }
-            level = level++;
+            if (config.recursionlevel != 0) {
+                if (level > config.recursionlevel) {
+                    return;
+                }
+            }
             if (file.listFiles() == null) {
                 return;
             }
             for (File subfile : file.listFiles()) {
-                filterFile(subfile, level);
+                filterFile(subfile, level + 1);
             }
             return;
         }
